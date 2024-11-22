@@ -34,7 +34,7 @@ msg_info "Installing MongoDB"
 wget -qO- https://www.mongodb.org/static/pgp/server-7.0.asc | gpg --dearmor >/usr/share/keyrings/mongodb-server-7.0.gpg
 echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] http://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 main" >/etc/apt/sources.list.d/mongodb-org-7.0.list
 $STD apt-get update
-$STD apt-get install -y mongodb-org
+$STD apt-get install -y mongodb-server=1:3.6.9+really3.6.8+90~g8e540c0b6d-0ubuntu5.3 #mongodb-org
 msg_ok "Installed MongoDB"
 
 msg_info "Installing UniFi Network Server"
